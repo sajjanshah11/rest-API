@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const authRouter = require('./router/authRouter')
 const bookRouter = require('./router/bookRouter')
+const getAuthorRouter = require('./router/getAuthorRouter')
 
 
 //setup our express app
@@ -23,7 +24,7 @@ app.use(express.json());
 // app.use('/api',require('./router/bookRouter'));
 app.use('/api',authRouter);
 app.use('/api',bookRouter);
-
+app.use('/api',getAuthorRouter)
 
 
 //error handling middleware

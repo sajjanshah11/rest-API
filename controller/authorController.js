@@ -12,7 +12,8 @@ const saveAuthorName =  async function(req,res){
 
     if(nameUpdate){
         res.status(201).json({
-            message:"name stored"
+            message:"name stored",
+            name:nameUpdate
         })
     } else {
         res.status(500).json({

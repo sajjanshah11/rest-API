@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
 
 const BookSchema = mongoose.Schema({
-    _id: mongoose.Schema.Types.ObjectId,
-    author: {
-        type: mongoose.Schema.Types.ObjectId, ref:'Author'
+    // _id: mongoose.Schema.Types.ObjectId,
+    authorId: {
+        type: mongoose.Schema.Types.ObjectId, 
+        ref:'Author' //ye mongoose ka id hoga jo humein author se milega
     },
-    BookName:{
+    bookName:{
         type:String
-    }
+    },
+    
 })
+
+
 
 const Book = mongoose.model('Book',BookSchema);
 
